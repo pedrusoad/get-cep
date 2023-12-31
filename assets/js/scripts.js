@@ -98,29 +98,32 @@ window.addEventListener('DOMContentLoaded', function () {
             }
             setLoading(true);
             // faz a consulta
-            fetch(apiURL + `?cep=${cep}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (!data.erro) {
-                        loopCep(data);
-                    } else {
-                        document.getElementById('show_error').classList.remove('d-none');
-                        document.getElementById('show_error').classList.add('d-block');
-                        document.getElementById('msg_erro').innerHTML = 'Ocorreu algum problema ou CEP não foi encontrado!';
-                    }
-                    setLoading(false);
-                    form.reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    setMsgError('Erro ao consultar CEP.');
-                    setLoading(false);
-                });
-
+            getCep();
         }
     });
     loopCeps = document.getElementById('loopCeps');
 });
+
+function getCep() {
+    fetch(apiURL + `?cep=${cep}`)
+        .then(response => response.json())
+        .then(data => {
+            if (!data.erro) {
+                loopCep(data);
+            } else {
+                document.getElementById('show_error').classList.remove('d-none');
+                document.getElementById('show_error').classList.add('d-block');
+                document.getElementById('msg_erro').innerHTML = 'Ocorreu algum problema ou CEP não foi encontrado!';
+            }
+            setLoading(false);
+            form.reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            setMsgError('Erro ao consultar CEP.');
+            setLoading(false);
+        });
+}
 
 function loopCep(data) {
     if (document.getElementById('cepZero')) {
