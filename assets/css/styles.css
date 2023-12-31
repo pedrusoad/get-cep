@@ -1,0 +1,179 @@
+html,
+body {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    color: #141414;
+}
+
+.glass-card {
+    background: rgba(236, 236, 236, 0.411);
+    overflow: hidden;
+}
+
+.cep-card {
+    background: rgba(5, 84, 241, 0.575);
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.bg-input {
+    background-color: #8585852c;
+    color: #141414 !important;
+    border-color: #0553f1;
+}
+
+.bg-input:focus {
+    /* color: #d1d1d1 !important; */
+    text-align: center;
+    background-color: #8585852c;
+    box-shadow: 0 0 0 0.25rem #0554f175 !important;
+}
+
+.form-label {
+    color: #141414;
+}
+
+.form-control:not(:placeholder-shown) {
+    text-align: center;
+}
+
+.form-control:not(:placeholder-shown)~label {
+    color: #141414 !important;
+}
+
+.form-control:not(:placeholder-shown)~label::after {
+    background: #0554f175 !important;
+}
+
+.form-control:focus~label {
+    color: #141414 !important;
+}
+
+.form-control:focus~label::after {
+    color: #141414 !important;
+    background: #0554f175 !important;
+}
+
+.form-control:focus {
+    border: #ffffff00;
+}
+
+.btn-input {
+    font-size: large;
+    font-weight: 500;
+    padding-top: 0.91rem;
+    padding-bottom: 0.91rem;
+    color: #fff;
+    background-color: #0553f1;
+    border-color: #0553f1;
+}
+
+.btn-input:hover {
+    background-color: #2e4092;
+    border-color: #2e4092;
+}
+
+.btn-input:focus,
+.btn-input:active,
+.btn-input:focus-visible {
+    background-color: #2e4092 !important;
+    border-color: #2e4092 !important;
+    box-shadow: 0 0 0 0.25rem #2e4092 !important;
+}
+
+.btn-input:disabled {
+    background-color: #002b80;
+    border-color: #002b80;
+}
+
+.btn_status {
+    display: flex;
+    justify-content: center;
+}
+
+.btn_status .btn_loading {
+    height: 27px;
+    width: 27px;
+}
+
+.btn_status:disabled .btn_loading,
+.btn_status .btn_ready {
+    display: flex;
+}
+
+.btn_status:disabled .btn_ready,
+.btn_status .btn_loading {
+    display: none;
+}
+
+/* Personalização da barra de rolagem para navegadores WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(167, 167, 167, 0.637);
+    /* Cor de fundo da área da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgb(91, 97, 150) 0%, rgb(68, 140, 173) 50%, rgb(91, 97, 150) 100%);
+    border-radius: 3px;
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2692c4;
+    /* Cor da barra de rolagem quando o mouse passa por cima */
+}
+
+@media (max-width: 450px) {
+    ::-webkit-scrollbar {
+        width: 0;
+        overflow-x: hidden;
+    }
+}
+
+.text-init {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    text-align: start;
+}
+
+.btn-jpa:hover {
+    box-shadow: 1px 1px 10px #0036a9;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+[data-bs-theme] {
+    --bs-form-invalid-color: #d30a1b;
+    --bs-form-invalid-border-color: #d30a1b;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-warning-text-emphasis: #725c13;
+}
