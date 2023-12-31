@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', function () {
             if (block) {
                 document.getElementById('show_error').classList.remove('d-none');
                 document.getElementById('show_error').classList.add('d-block');
-                document.getElementById('msg_erro').innerHTML = 'Calma ai jovem! Fala com Pedro para ele habilitar sua busca!';
+                document.getElementById('msg_erro').innerHTML = 'Calma ai jovem! Fala com o Pedro para ele habilitar sua busca!';
                 setLoading(false);
             } else {
                 getCep(cep);
