@@ -86,25 +86,15 @@ window.addEventListener('DOMContentLoaded', function () {
             });
             // define o payload da consulta
             let cep = values.cep;
-            const apiConfig = {
-                method: 'GET',
-                headers: {
-                    "Access-Control-Allow-Origin": "*",
-                    "Access-Control-Allow-Credentials": true,
-                    'Access-Control-Allow-Headers': '*',
-                    'Access-Control-Allow-Methods': '*'
-                },
-                mode: 'cors'
-            }
             setLoading(true);
             // faz a consulta
-            getCep();
+            getCep(cep);
         }
     });
     loopCeps = document.getElementById('loopCeps');
 });
 
-function getCep() {
+function getCep(cep) {
     fetch(apiURL + `?cep=${cep}`)
         .then(response => response.json())
         .then(data => {
