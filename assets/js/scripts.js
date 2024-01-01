@@ -1,5 +1,5 @@
 const apiURL = 'https://uwhn3x0mm9.execute-api.us-east-1.amazonaws.com/v1';
-let block = false;
+let block = true;
 
 window.addEventListener('DOMContentLoaded', function () {
     // define o ano
